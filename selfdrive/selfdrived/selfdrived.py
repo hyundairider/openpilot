@@ -79,7 +79,7 @@ class SelfdriveD:
       ignore += ['driverCameraState', 'managerState']
     elif self.disable_dm > 0:
       self.camera_packets.remove("driverCameraState")
-    ignore += ['driverMonitoringState']
+    ignore += ['driverCameraState', 'driverMonitoringState']
 
     if REPLAY:
       # no vipc in replay will make them ignored anyways
