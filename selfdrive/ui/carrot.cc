@@ -1945,7 +1945,7 @@ typedef struct {
 } lead_vertex_data;
 #endif
 
-char    carrot_man_debug[128] = "";
+char    carrot_man_debug[256] = "";
 class DrawCarrot : public QObject {
     Q_OBJECT
 
@@ -2435,9 +2435,9 @@ public:
         else if (carState.getGearShifter() == cereal::CarState::GearShifter::PARK) strcpy(gear_str, "P");
         else if (carState.getGearShifter() == cereal::CarState::GearShifter::DRIVE) {
             if (carState.getGearStep() > 0)
-				sprintf(gear_str, "%d", carState.getGearStep());
-			else
-				strcpy(gear_str, "D");
+      				sprintf(gear_str, "%d", carState.getGearStep());
+		      	else
+				      strcpy(gear_str, "D");
         }
         else if(carState.getGearShifter() == cereal::CarState::GearShifter::NEUTRAL) strcpy(gear_str, "N");
         else if (carState.getGearShifter() == cereal::CarState::GearShifter::REVERSE) strcpy(gear_str, "R");
